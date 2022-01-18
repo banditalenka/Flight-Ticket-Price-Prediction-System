@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Flight Ticket Price Prediction System</title>
+    <link rel="icon" type="image/png" href="flightlogo.jpeg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <script src='main.js'></script>
+    <script type="text/javascript">
+</script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="title">Flight Ticket Price Prediction System</div>
+        
+        <!--<form class="box"  action="checkmail.html" method="POST" onsubmit = "return false"></form>-->
+        <form action="#" onsubmit = "return false">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Booking Date</span>
+                    <input type="datetime-local"  name="Book_Time" id="Book_Time" >        
+                </div>
+                <div class="input-box">
+                    <span class="details">Journey Start Date & Time</span>
+                    <input type="datetime-local"  name="Dep_Time" id="Dep_Time" required>        
+                </div>
+                <div class="input-box">
+                    <span class="details">Destination Arrival Date & Time</span>
+                    <input type="datetime-local" name="Arr_Time" id="Arr_Time" required>        
+                </div>
+                <div class="input-box">
+                    <span class="details">Choose Flight</span>
+                    <select class="location" name="" id="flight">
+                        <option value="" disabled="disabled" selected="selected">Choose Airplane</option>
+                        <option>Air Aisa</option>
+                        <option>Luftansa</option>
+                          </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">Choose Source</span>
+                    <select class="location" name="" id="source">
+                        <option value="" disabled="disabled" selected="selected">Choose Source</option>
+                        <option>Delhi</option>
+                        <option>Mumbai</option>
+                          </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">Choose Destination</span>
+                    <select class="location" name="" id="destination">
+                        <option value="" disabled="disabled" selected="selected">Choose Destination</option>
+                        <option>West Bengal</option>
+                        <option>Hydrabad</option>
+                          </select>
+                </div>                                
+            </div>
+            <div class="stoppage-details">
+                <input type="radio" name="stoppage" id="dot-0" value="0">
+                <input type="radio" name="stoppage" id="dot-1" value="1">
+                <input type="radio" name="stoppage" id="dot-2" value="2">
+                <input type="radio" name="stoppage" id="dot-3" value="3">
+                <input type="radio" name="stoppage" id="dot-4" value="4">
+                <span class="stoppage-title">Stoppage</span>
+                <div class="category">
+                    <label for="dot-0">
+                        <span class="dot zero"></span>
+                        <span class="stoppage"> None Stop</span>
+
+                    </label>
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="stoppage"> 1 Stop</span>
+
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="stoppage"> 2 Stops</span>
+
+                    </label>  
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="stoppage"> 3 Stops </span>
+
+                    </label>   
+                    <label for="dot-4">
+                        <span class="dot four"></span>
+                        <span class="stoppage"> 4 Stops </span>
+
+                    </label>                                                          
+                </div>
+            </div>
+            <div class="button" >
+                <input type="submit"  onclick=" onClickedEstimatePrice()" value="Estimate Price">
+            <!--<input type="submit"  onclick="onClickedInputDetails()" value="Estimate Price">-->
+        </div>
+        <div class="output">
+            <span class="output-title" id="result"></span>
+            <span class="output-title" id="date"></span>
+        </div>
+        </form>
+    </div>
+    
+</body>
+</html>
